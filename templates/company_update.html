@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+Update Company Details
+
+<form method='post'> {% csrf_token %}
+{{form.as_ul}}z
+<input type='submit' value='update'>
+</form>
+
+{% endblock %}

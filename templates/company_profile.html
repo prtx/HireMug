@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+Hello {{user}}
+
+<a href='/company_update'>Update</a>
+<a href='/job_publish'>PostJob</a>
+<a href='/company_logout'>LogOut</a>
+
+</br>
+
+{% for job in jobs %}
+
+</br>
+
+Job: <a href='/job_detail/{{job.id}}'> {{job.title}} </a> </br>
+Company: {{job.user}} </br>
+Description: {{job.description}} </br>
+Date: {{job.date}} </br>
+
+------------------</br>
+</br>
+
+{% endfor %}
+
+{% endblock %}

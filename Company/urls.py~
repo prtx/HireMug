@@ -1,0 +1,11 @@
+from django.conf.urls import patterns, include, url
+
+urlpatterns = patterns('Company.views',
+	url(r'^accounts/login/$', 'django.contrib.auth.views.login'),
+	url(r'^company_register/$', 'register'),
+	url(r'^company_login/$', 'login'),
+	url(r'^company_profile/$', 'profile'),
+	url(r'^company_update/$', 'update'),
+	url(r'^company_logout/$', 'logout'),
+	
+)

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+<script type="text/javascript">
+var disqus_developer = 1;
+var disqus_url = 'http://example.com';
+</script>
+{% load disqus_tags %}
+{% disqus_dev %}
+
+{% block content %}
+
+Job Detail
+
+</br>
+
+</br>
+Job: {{job.title}} </br>
+Company: {{job.user}} </br>
+Description: {{job.description}} </br>
+Date: {{job.date}} </br>
+
+------------------</br>
+<a href='/job_delete/{{job.id}}'> Delete </a> </br>
+</br>
+{% load disqus_tags %}
+{% disqus_show_comments %}
+{% endblock %}

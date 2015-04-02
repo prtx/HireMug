@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+Post Job
+
+<form method='post'> {% csrf_token %}
+{{form.as_ul}}
+<input type='submit' value='login'>
+</form>
+
+{% endblock %}

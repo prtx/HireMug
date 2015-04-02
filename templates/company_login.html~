@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+Register Company
+
+{%if {{invalid}} %}
+
+Sorry, Invalid
+{% endif %}
+
+<form  method='post'> {% csrf_token %}
+Username: <input type='text' name='username' id='username'>
+Password: <input type='password' name='password' id='password'>
+<input type='submit' value='login'>
+</form>
+{{message}}
+{% endblock %}

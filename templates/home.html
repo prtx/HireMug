@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+This in jobsite.
+
+<a href = 'company_register'>SignUp</a>
+<a href = 'company_login'>Login</a>
+
+</br>
+
+{% for job in jobs %}
+
+</br>
+{{job.title}}</br>
+{{job.user}}</br>
+{{job.description}}</br>
+{{job.date}}</br>
+------------------</br>
+</br>
+
+{% endfor %}
+
+{% endblock %}
